@@ -16,7 +16,7 @@
 El objetivo de la práctica es aprender a cómo manejar los archivos de texto en Java a través de un controlador que te permite escritura, lectura y conteo de palabras.
 La práctica también tendrá la información sobre una pequeña investigación sobre Procesamiento de Lenguaje Natural (NPL) y Bolsa de Palabras (BoW).
 
-##ACTIVIDADES DESARROLLADAS
+## ACTIVIDADES DESARROLLADAS
 
 **1.Crear un repositorio en GitHub**
 
