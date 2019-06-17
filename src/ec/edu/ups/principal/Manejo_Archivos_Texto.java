@@ -12,6 +12,7 @@ package ec.edu.ups.principal;
 import ec.edu.ups.controlador.Texto_Controlador;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -61,7 +62,16 @@ public class Manejo_Archivos_Texto {
 				    }
                                   case 3:{
                                        Texto_Controlador tc=new Texto_Controlador();
-                                       
+                                        String ruta = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Manejo_Archivos_Texto";
+                                                    File archivo = new File(ruta);
+                                                    File[] archivos = archivo.listFiles();
+                                                    for (File newarchivo : archivos) {
+                                                        if (!newarchivo.getName().equals("Resultado.txt")) {
+                                                            tc.LecturaResultado(ruta+"\\"+newarchivo.getName());
+                                                        }
+                                                    }
+                                                tc.guardaResultado();
+                                            
 				        break;
 				    }
                                   
