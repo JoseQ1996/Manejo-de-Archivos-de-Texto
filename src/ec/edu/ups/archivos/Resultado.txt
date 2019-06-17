@@ -1,0 +1,2 @@
+hola   veces repetidas:2
+mundo   veces repetidas:1

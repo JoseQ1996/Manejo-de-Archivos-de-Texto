@@ -24,7 +24,7 @@ import java.util.List;
  * @author José Quinde
  */
 public class Texto_Controlador {
-    String ruta = "archivo.txt";
+    String ruta = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Manejo_Archivos_Texto\\src\\ec\\edu\\ups\\archivos\\archivo.txt";
        private String linea;
     private List<Palabras> lista;
 
@@ -78,28 +78,22 @@ public class Texto_Controlador {
             System.out.println("error de lectura");
         }
     }
-    private void leerLinea() {
-         
-        try {
-      FileReader fr = new FileReader(ruta);
-      BufferedReader br = new BufferedReader(fr);
- 
-      String linea1;
-      while((linea1 = br.readLine()) != null)
-        linea=linea1;
+    /**
+     * Este metodo sirve para Leer la linea y luego lo compara
+     */
+    private void leerLinea() { 
         String palabras[] = linea.split(" ");
          for(int i = 0; i <palabras.length;i++){
             compararPalabra(palabras[i].toLowerCase());
         }
-      fr.close();
-    }
-    catch(Exception e) {
-      System.out.println("Excepcion leyendo fichero "+ ruta + ": " + e);
-    }
+     
        
     
     }
-
+    /**
+     * Metodo para comparar Palabras repetidas
+     * @param palabra 
+     */
     private void compararPalabra(String palabra) {
         int con = 0;
         for (Palabras  palabralista: lista) {
@@ -116,7 +110,11 @@ public class Texto_Controlador {
             lista.add(newPalabra);
         }
     }
-
+    /**
+     * Este metodo guarda en una archivo resultado las veces repetidas 
+     * 
+     * @throws IOException 
+     */
     public void guardaResultado() throws IOException {
         Collections.sort(lista, new Comparator<Palabras>(){
             public int compare(Palabras p1, Palabras p2){
@@ -124,7 +122,7 @@ public class Texto_Controlador {
             }
         });
         try {
-            String ruta2 = "Resultado.txt";
+            String ruta2 = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Manejo_Archivos_Texto\\src\\ec\\edu\\ups\\archivos\\Resultado.txt";
             FileWriter archivo = new FileWriter(ruta2, false);
             
             BufferedWriter escritura = new BufferedWriter(archivo);

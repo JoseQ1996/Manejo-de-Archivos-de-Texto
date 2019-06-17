@@ -49,6 +49,7 @@ public class Manejo_Archivos_Texto {
 				        //un switch que ingresa dependiendo el valor seleccionado
 				    switch(a){
 				    case 1:{
+                                        //Escribe la palabra
                                         System.out.println("Ingrese Texto a escribir");
                                         String palabra=sc.next();
                                         Texto_Controlador tc=new Texto_Controlador();
@@ -56,13 +57,15 @@ public class Manejo_Archivos_Texto {
                        				        break;
 				    }
 				    case 2:{
+                                        //lee el archivo
                                        Texto_Controlador tc=new Texto_Controlador();
                                         tc.Lectura();
 				        break;
 				    }
                                   case 3:{
+                                      //guarda el resultado en un txt
                                        Texto_Controlador tc=new Texto_Controlador();
-                                        String ruta = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Manejo_Archivos_Texto";
+                                        String ruta = "C:\\Users\\Usuario\\Documents\\NetBeansProjects\\Manejo_Archivos_Texto\\src\\ec\\edu\\ups\\archivos";
                                                     File archivo = new File(ruta);
                                                     File[] archivos = archivo.listFiles();
                                                     for (File newarchivo : archivos) {

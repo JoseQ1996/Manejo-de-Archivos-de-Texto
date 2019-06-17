@@ -10,10 +10,16 @@ package ec.edu.ups.clase;
  * @author José Quinde
  */
 public class Palabras {
+    //Declaracion variables
     private String nombre;
     private int cantidad;
+    /**
+     * Constructor vacio
+     */
+    public Palabras() {
+    }
     
-
+    
     public String getNombre() {
         return nombre;
     }
@@ -29,7 +35,10 @@ public class Palabras {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
-
+    /**
+     * ToString que imprime
+     * @return 
+     */
     @Override
     public String toString() {
         return "Palabras{" + "nombre=" + nombre + ", cantidad=" + cantidad + '}';
